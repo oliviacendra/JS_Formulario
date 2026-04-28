@@ -17,7 +17,7 @@
   <body>
     <section>
       <h1>Compra de entradas</h1>
-      <form>
+      <form onsubmit="return comprar();">
         <label for="nombre">Nombre:</label>
         <input
           type="text"
@@ -46,6 +46,7 @@
           max="10"
           placeholder="Número de entradas"
           required
+          onchange="costeTotal()"
         />
         <p>Coste total de las entradas: <span id="coste"></span></p>
         <input type="submit" value="Comprar entradas" />
@@ -61,7 +62,7 @@
           <li>Número de entradas:<span id="num"></span></li>
           <li>Coste total:<span id="ct"></span></li>
         </ul>
-        <button>Aceptar</button>
+        <button onclick="cerrarVentana()">Aceptar</button>
       </div>
     </div>
   </body>
